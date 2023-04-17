@@ -16,14 +16,14 @@ function plazoFijo() {
     let interes = 0;
   
     if (edad >= 18) {
-      monto = prompt("¿Cual es el monto que quiere ingresar?");
+      monto = prompt("¿Cuál es el monto que quiere ingresar?");
   
       while (monto < 1000000 || monto != Number(monto)) {
         monto = prompt(
-          "Ingrese otro monto. Los plazos fijos no pueden ser de menos de $1.000.000 (un millon)"
+          "Ingrese otro monto. Los plazos fijos no pueden ser de menos de $1.000.000 (un millón)"
         );
       }
-      tiempo = prompt("Cuantos meses quiere tener su dinero en plazo fijo?");
+      tiempo = prompt("Cuántos meses quiere tener su dinero en plazo fijo?");
   
       while (tiempo < 12 || tiempo != Number(tiempo)) {
         tiempo = prompt(
@@ -34,17 +34,17 @@ function plazoFijo() {
       if (tiempo >= 12 && tiempo < 18) {
         interes = 102;
         alert(
-          `Señor ${nombre} su plazo fijo generará un interes del ${interes}% (Mano a mano con la infla)`
+          `Señor ${nombre} su plazo fijo generará un interés del ${interes}% (Mano a mano con la infla)`
         );
       } else if (tiempo >= 18 && tiempo <= 24) {
         interes = 115;
         alert(
-          `Señor ${nombre} su plazo fijo generará un interes del ${interes}% (Le ganaste a la infla por poquito)`
+          `Señor ${nombre} su plazo fijo generará un interés del ${interes}% (Le ganaste a la infla por poquito)`
         );
       } else if (tiempo > 24) {
         interes = 120;
         alert(
-          `Señor ${nombre} su plazo fijo generará un interes del ${interes}% anualizado (Por ahora le ganas a la infla. En un año vemos)`
+          `Señor ${nombre} su plazo fijo generará un interés del ${interes}% anualizado (Por ahora le ganas a la infla. En un año vemos)`
         );
       }
     } else {
@@ -54,7 +54,7 @@ function plazoFijo() {
     }
   
     let registroIngresos = plazoFijo;
-    registroIngresos = `El señor ${nombre} de ${edad} años de edad solicitó cotización por el ingreso de ${monto} en concepto de plazo fijo por ${tiempo} meses generandole un interes del ${interes}%`;
+    registroIngresos = `El señor ${nombre} de ${edad} años de edad solicitó cotización por el ingreso de ${monto} en concepto de plazo fijo por ${tiempo} meses generandole un interés del ${interes}%`;
   
     console.log(registroIngresos);
   }
